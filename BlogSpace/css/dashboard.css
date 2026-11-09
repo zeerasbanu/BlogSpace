@@ -1,0 +1,478 @@
+/* ========================================
+   Dashboard and Blog Editor
+======================================== */
+
+/* Dashboard Page */
+
+.dashboard-page {
+    background: #f7f8fb;
+    min-height: 100vh;
+}
+
+/* Dashboard Header Actions */
+
+.dashboard-top-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.user-avatar {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    color: white;
+    background: #263a67;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.logout-button {
+    border: 0;
+    background: transparent;
+    color: #788398;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.logout-button:hover {
+    color: var(--blue);
+}
+
+/* Dashboard Main Section */
+
+.dashboard-main {
+    padding-top: 58px;
+    padding-bottom: 90px;
+}
+
+.dashboard-welcome {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 34px;
+}
+
+.dashboard-welcome h1,
+.editor-heading h1 {
+    font-size: 36px;
+    margin: 0 0 9px;
+}
+
+.dashboard-welcome p:not(.eyebrow),
+.editor-heading p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 0;
+}
+
+/* Statistics Cards */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 45px;
+}
+
+.stat-card {
+    position: relative;
+    padding: 22px 23px;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: white;
+}
+
+.stat-icon {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 7px;
+    background: #eef1ff;
+    color: var(--blue);
+    font-size: 17px;
+}
+
+.stat-green {
+    color: var(--green);
+    background: #eaf7f1;
+}
+
+.stat-orange {
+    color: var(--orange);
+    background: #fff4e9;
+}
+
+.stat-card p {
+    color: #7d8798;
+    font-size: 11px;
+    margin: 16px 0 1px;
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 28px;
+    line-height: 1.4;
+}
+
+.stat-card small {
+    color: #a0a8b5;
+    font-size: 10px;
+}
+
+/* Blog Posts Table Section */
+
+.dashboard-list-section {
+    padding: 28px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+}
+
+.list-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.list-heading .eyebrow {
+    margin-bottom: 5px;
+}
+
+.list-heading h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    margin: 0;
+}
+
+/* Table */
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+.posts-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 650px;
+}
+
+.posts-table th {
+    color: #9aa3b2;
+    font-size: 9px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 13px 12px;
+    border-bottom: 1px solid var(--line);
+}
+
+.posts-table td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #f0f1f5;
+    font-size: 11px;
+    color: #707c90;
+}
+
+.post-title-cell {
+    color: var(--ink) !important;
+    font-weight: 700;
+    max-width: 230px;
+}
+
+/* Post Status */
+
+.status-pill {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 20px;
+    color: #247653;
+    background: #eaf8f1;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.status-draft {
+    color: #a66b25;
+    background: #fff4e6;
+}
+
+/* Table Action Buttons */
+
+.table-action {
+    border: 0;
+    background: transparent;
+    color: var(--blue);
+    font-size: 10px;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.table-action.delete {
+    color: #c44d59;
+}
+
+/* Empty Dashboard */
+
+.dashboard-empty {
+    text-align: center;
+    padding: 45px 20px 35px;
+}
+
+.empty-illustration {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    background: #eef1ff;
+    color: var(--blue);
+    font-size: 25px;
+}
+
+.dashboard-empty h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    margin: 0 0 5px;
+}
+
+.dashboard-empty p {
+    color: var(--muted);
+    font-size: 11px;
+    margin: 0 0 18px;
+}
+
+/* ========================================
+   Blog Editor
+======================================== */
+
+/* Editor Main Section */
+
+.editor-main {
+    padding-top: 50px;
+    padding-bottom: 90px;
+}
+
+.editor-heading {
+    margin-bottom: 30px;
+}
+
+/* Editor Layout */
+
+.editor-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 270px;
+    align-items: start;
+    gap: 28px;
+}
+
+/* Editor Form */
+
+.editor-form {
+    padding: 28px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+}
+
+.editor-form label {
+    display: block;
+}
+
+.editor-form input,
+.editor-form select,
+.editor-form textarea {
+    display: block;
+    margin-bottom: 21px;
+}
+
+.editor-form textarea {
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.editor-form .story-content {
+    min-height: 260px;
+}
+
+.optional-label {
+    color: #a1a9b6;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+/* Editor Actions */
+
+.editor-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+}
+
+.editor-actions > div {
+    display: flex;
+    gap: 10px;
+}
+
+/* Editor Buttons */
+
+.button-outline {
+    background: white;
+    color: var(--blue);
+    border: 1px solid #dce3ff;
+}
+
+.button-outline:hover {
+    color: white;
+}
+
+.cancel-link {
+    color: #818b9d;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* Writing Tips */
+
+.editor-tip {
+    padding: 23px;
+    border-radius: 7px;
+    background: #edf1ff;
+}
+
+.tip-icon {
+    color: var(--blue);
+    font-size: 23px;
+}
+
+.editor-tip h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+    margin: 8px 0;
+}
+
+.editor-tip p,
+.editor-tip li {
+    color: #6e7890;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.tip-divider {
+    height: 1px;
+    background: #dbe2fb;
+    margin: 18px 0;
+}
+
+.editor-tip strong {
+    font-size: 10px;
+}
+
+.editor-tip ul {
+    padding-left: 17px;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   Responsive Design - Tablets
+======================================== */
+
+@media (max-width: 760px) {
+
+    .dashboard-main {
+        padding-top: 38px;
+    }
+
+    .dashboard-welcome {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .stats-grid {
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .editor-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .editor-tip {
+        order: -1;
+    }
+}
+
+/* ========================================
+   Responsive Design - Mobile
+======================================== */
+
+@media (max-width: 520px) {
+
+    .dashboard-top-actions {
+        gap: 10px;
+    }
+
+    .dashboard-top-actions .login-link {
+        display: none;
+    }
+
+    .dashboard-welcome h1,
+    .editor-heading h1 {
+        font-size: 29px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        display: grid;
+        grid-template-columns: 40px 1fr auto;
+        align-items: center;
+        gap: 0 10px;
+    }
+
+    .stat-icon {
+        grid-row: span 2;
+    }
+
+    .stat-card p {
+        margin: 0;
+    }
+
+    .stat-card strong {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+    }
+
+    .stat-card small {
+        grid-column: 2;
+    }
+
+    .dashboard-list-section,
+    .editor-form {
+        padding: 18px;
+    }
+
+    .editor-actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .editor-actions > div {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a story | BlogSpace</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+
+  <body class="dashboard-page">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">B</span> BlogSpace
+        </a>
+
+        <div class="dashboard-top-actions">
+          <a href="dashboard.html" class="login-link">← Dashboard</a>
+          <span class="user-avatar" id="userAvatar">U</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="container editor-main">
+      <div class="editor-heading">
+        <div>
+          <p class="eyebrow">THE EDITOR</p>
+          <h1 id="editorHeading">
+            Create a story<span class="heading-dot">.</span>
+          </h1>
+          <p>Put your thoughts into words. You can save a draft and finish later.</p>
+        </div>
+      </div>
+
+      <div class="editor-layout">
+        <form class="editor-form" id="blogForm">
+          <div class="form-message" id="blogMessage" role="alert"></div>
+
+          <label for="blogTitle">Story title</label>
+          <input
+            id="blogTitle"
+            type="text"
+            placeholder="Give your story a good title..."
+            maxlength="100"
+            required
+          />
+
+          <label for="blogCategory">Category</label>
+          <select id="blogCategory" required>
+            <option value="">Choose a category</option>
+            <option>Technology</option>
+            <option>Lifestyle</option>
+            <option>Design</option>
+            <option>Learning</option>
+            <option>Travel</option>
+            <option>Personal</option>
+          </select>
+
+          <label for="blogImage">
+            Cover image URL <span class="optional-label">Optional</span>
+          </label>
+          <input id="blogImage" type="url" placeholder="https://example.com/image.jpg" />
+
+          <label for="blogExcerpt">Short introduction</label>
+          <textarea
+            id="blogExcerpt"
+            rows="3"
+            maxlength="220"
+            placeholder="A short summary to help readers decide..."
+            required
+          ></textarea>
+
+          <label for="blogContent">Your story</label>
+          <textarea
+            id="blogContent"
+            class="story-content"
+            rows="14"
+            placeholder="Start writing here..."
+            required
+          ></textarea>
+
+          <div class="editor-actions">
+            <a class="cancel-link" href="dashboard.html">Cancel</a>
+
+            <div>
+              <button class="button button-outline" type="button" id="saveDraftButton">
+                Save draft
+              </button>
+              <button class="button" type="submit" id="publishButton">
+                Publish story ↗
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <aside class="editor-tip">
+          <span class="tip-icon">✦</span>
+          <h3>A note for writers</h3>
+          <p>
+            Write like you are talking to a real person. A clear idea and an honest
+            voice are more important than perfect words.
+          </p>
+
+          <div class="tip-divider"></div>
+
+          <strong>Before you publish</strong>
+          <ul>
+            <li>Choose a clear title</li>
+            <li>Add a short introduction</li>
+            <li>Check your spelling</li>
+            <li>Give your story a category</li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+  </body>
+</html>
+

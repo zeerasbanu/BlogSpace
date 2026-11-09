@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My dashboard | BlogSpace</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+
+  <body class="dashboard-page">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">B</span> BlogSpace
+        </a>
+
+        <div class="dashboard-top-actions">
+          <a href="index.html" class="login-link">View website ↗</a>
+          <span class="user-avatar" id="userAvatar">U</span>
+          <button class="logout-button" id="logoutButton">Log out</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container dashboard-main">
+      <div class="dashboard-welcome">
+        <div>
+          <p class="eyebrow">YOUR WRITING SPACE</p>
+          <h1>
+            Good to see you, <span id="welcomeName">Writer</span>
+            <span class="heading-dot">.</span>
+          </h1>
+          <p>Here is what is happening with your stories.</p>
+        </div>
+
+        <a class="button" href="create-blog.html">＋ Write a story</a>
+      </div>
+
+      <section class="stats-grid">
+        <article class="stat-card">
+          <span class="stat-icon">▤</span>
+          <p>Total stories</p>
+          <strong id="totalStories">0</strong>
+          <small>All your posts</small>
+        </article>
+
+        <article class="stat-card">
+          <span class="stat-icon stat-green">↗</span>
+          <p>Published</p>
+          <strong id="publishedStories">0</strong>
+          <small>Live on BlogSpace</small>
+        </article>
+
+        <article class="stat-card">
+          <span class="stat-icon stat-orange">◷</span>
+          <p>Drafts</p>
+          <strong id="draftStories">0</strong>
+          <small>Still in progress</small>
+        </article>
+      </section>
+
+      <section class="dashboard-list-section">
+        <div class="list-heading">
+          <div>
+            <p class="eyebrow">YOUR CONTENT</p>
+            <h2>My stories</h2>
+          </div>
+          <a href="create-blog.html" class="text-link">Create a post →</a>
+        </div>
+
+        <div class="table-wrap">
+          <table class="posts-table">
+            <thead>
+              <tr>
+                <th>STORY</th>
+                <th>CATEGORY</th>
+                <th>STATUS</th>
+                <th>DATE</th>
+                <th>ACTIONS</th>
+              </tr>
+            </thead>
+            <tbody id="dashboardPosts"></tbody>
+          </table>
+        </div>
+
+        <div class="dashboard-empty" id="dashboardEmpty">
+          <div class="empty-illustration">✎</div>
+          <h3>Your first story is waiting.</h3>
+          <p>Start writing and your posts will show up here.</p>
+          <a class="button" href="create-blog.html">Write your first story</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
+
